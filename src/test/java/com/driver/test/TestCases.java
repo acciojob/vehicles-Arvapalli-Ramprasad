@@ -1,16 +1,13 @@
 package com.driver.test;
 
-import com.driver.Boat;
 import com.driver.F1;
 import com.driver.Car;
-import com.driver.Vehicle;
-import com.driver.WaterVehicle;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestCases {
-  
+
     @Test
     public void testCar1() {
         Car car = new Car("Toyota", 4, 4, 5, true, "Sedan", 5);
@@ -21,6 +18,7 @@ public class TestCases {
         assertTrue(car.isManual());
         assertEquals("Sedan", car.getType());
         assertEquals(5, car.getSeats());
+        assertEquals(0, car.getCurrentGear());
     }
 
     @Test
