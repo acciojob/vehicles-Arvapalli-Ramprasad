@@ -2,15 +2,13 @@ package com.driver.test;
 
 import com.driver.Boat;
 import com.driver.F1;
-import com.driver.Car;
-import com.driver.Vehicle;
-import com.driver.WaterVehicle;
-
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class TestCases {
-  public void testF1Acceleration() {
+    @Test
+    public void testF1Acceleration() {
         F1 f1 = new F1("Ferrari", false);
         assertEquals(0, f1.getCurrentSpeed());
 
@@ -26,6 +24,8 @@ public class TestCases {
         f1.accelerate(-60); // Should stop the car
         assertEquals(0, f1.getCurrentSpeed());
     }
+
+    @Test
     public void testBoat() {
         Boat boat = new Boat("Titanic", 3000);
         assertEquals("Titanic", boat.getVehicleName());
