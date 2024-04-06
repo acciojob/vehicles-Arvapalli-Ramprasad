@@ -39,4 +39,16 @@ public class F1 extends Car {
             changeSpeed(newSpeed, getCurrentDirection());
         }
     }
+
+    public String getName() {
+        return super.getName();
+    }
+
+    public boolean isManual() {
+        return super.isManual();
+    }
+
+    public int getCurrentGear() {
+        return super.getCurrentGear();
+    }
 }
